@@ -21,7 +21,7 @@ typecount = (type1count + type2count).sort_values(ascending=False)
 What is the most abundant type of Pokemon?
 
 """
-
+print(typecount)
 
 """
 2. Let's use matplotlib to create a bar chart that shows visually how many of each type there are. Use and run the code below.
@@ -29,7 +29,9 @@ fig = plt.figure(figsize=(6, 3))
 typecount.plot.bar()
 plt.show()
 """
-
+fig = plt.figure(figsize=(6, 3))
+typecount.plot.bar()
+plt.show()
 
 """
 Each Pokemon has 6 different stats: HP, ATTACK, DEFENSE, SPECIAL ATTACK, SPECIAL DEFENSE, and SPEED. Those stats added together is their TOTAL POINTS, which is already a column in the pokedex dataframe. The code below calculate the average total points for each type of Pokemon.
@@ -46,13 +48,15 @@ What type appears to have the lowest total points?
 What type appears to have the highest total points?
 
 """
-
+print(totalpoints,totalpoints.max(),totalpoints.min())
 
 
 """
 4. Like you did in #2, display a bar chart that shows the type and average total points.
 """
-
+fig = plt.figure(figsize=(6, 3))
+typecount.plot.bar()
+plt.show()
 
 
 
@@ -61,16 +65,22 @@ What type appears to have the highest total points?
 """
 nonspecial = pokedex[(pokedex['is_legendary']==0) & (pokedex['is_sub_legendary']==0)]
 
+
 """
 6. Print the nonspecial pokedex. Does it even the playing field?
 """
-
+print(nonspecial)
 
 
 """
 7. Using what you just did on the original pokedex (with legendaries), try to figure out which type of Pokemon has the highest of each stat.
 """
-
+print(pokedex[pokedex['hp'].max()]])
+print(pokedex[pokedex['attack'].max()]])
+print(pokedex[pokedex['defense'].max()]])
+print(pokedex[pokedex['special attack'].max()]])
+print(pokedex[pokedex['special defense'].max()]])
+print(pokedex[pokedex['average'].max()]])
 """
 Highest Average HP:
 Highest Average Attack:
